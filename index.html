@@ -1,1096 +1,620 @@
-<!DOCTYPE html>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta content="width=device-width" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet" />
+    <style>
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+        }
 
-<style>body {
-width: 100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0;
-}
-.ExternalClass {
-width: 100%;
-}
-.ExternalClass {
-line-height: 100%;
-}
-#backgroundTable {
-margin: 0; padding: 0; width: 100% !important; line-height: 100% !important;
-}
-body {
-background-color: #ffffff; background-repeat: repeat; background-position: center top;
-}
-body {
-color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; padding: 0; margin: 0; text-align: left; line-height: 1.5;
-}
-a:hover {
-color: #2795b6;
-}
-a:active {
-color: #2795b6;
-}
-a:visited {
-color: #2ba6cb;
-}
-h1 a:active {
-color: #2ba6cb !important;
-}
-h2 a:active {
-color: #2ba6cb !important;
-}
-h3 a:active {
-color: #2ba6cb !important;
-}
-h4 a:active {
-color: #2ba6cb !important;
-}
-h5 a:active {
-color: #2ba6cb !important;
-}
-h6 a:active {
-color: #2ba6cb !important;
-}
-h1 a:visited {
-color: #2ba6cb !important;
-}
-h2 a:visited {
-color: #2ba6cb !important;
-}
-h3 a:visited {
-color: #2ba6cb !important;
-}
-h4 a:visited {
-color: #2ba6cb !important;
-}
-h5 a:visited {
-color: #2ba6cb !important;
-}
-h6 a:visited {
-color: #2ba6cb !important;
-}
-table.secondary:hover td {
-background: #d0d0d0 !important; color: #555555;
-}
-table.secondary:hover td a {
-color: #555555 !important;
-}
-table.secondary td a:visited {
-color: #555555 !important;
-}
-table.secondary:active td a {
-color: #555555 !important;
-}
-table.success:hover td {
-background: #457a1a !important;
-}
-table.alert:hover td {
-background: #970b0e !important;
-}
-body.outlook p {
-display: inline !important;
-}
-@media only screen and (min-width: 768px) {
-  table.container {
-    width: 580px !important;
-  }
-  .mail .hide-for-desktop {
-    display: none !important;
-  }
-  .mail .hide-and-true {
-    display: none;
-  }
-  .mail .hide-and-false {
-    display: block !important;
-  }
-  .mail .hide-or-true {
-    display: none !important;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .mail img {
-    max-width: 100% !important; max-height: 100% !important; padding: 0 !important; width: auto !important; height: auto !important;
-  }
-  .mail .social img {
-    width: inherit !important;
-  }
-  .mail img.normal {
-    width: inherit !important;
-  }
-  .mail center {
-    min-width: 0 !important;
-  }
-  .mail .container {
-    width: 100% !important;
-  }
-  .mail .row {
-    width: 100% !important; display: block !important;
-  }
-  .mail .wrapper {
-    display: block !important; padding-right: 0 !important;
-  }
-  .mail .columns {
-    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
-  }
-  .mail .column {
-    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
-  }
-  .mail .wrapper.first .columns {
-    display: table !important;
-  }
-  .mail .wrapper.first .column {
-    display: table !important;
-  }
-  .mail table.columns > tbody > tr > td {
-    width: 100% !important;
-  }
-  .mail table.column > tbody > tr > td {
-    width: 100% !important;
-  }
-  .mail .columns td.one {
-    width: 8.333333% !important;
-  }
-  .mail .column td.one {
-    width: 8.333333% !important;
-  }
-  .mail .columns td.two {
-    width: 16.666666% !important;
-  }
-  .mail .column td.two {
-    width: 16.666666% !important;
-  }
-  .mail .columns td.three {
-    width: 25% !important;
-  }
-  .mail .column td.three {
-    width: 25% !important;
-  }
-  .mail .columns td.four {
-    width: 33.333333% !important;
-  }
-  .mail .column td.four {
-    width: 33.333333% !important;
-  }
-  .mail .columns td.five {
-    width: 41.666666% !important;
-  }
-  .mail .column td.five {
-    width: 41.666666% !important;
-  }
-  .mail .columns td.six {
-    width: 50% !important;
-  }
-  .mail .column td.six {
-    width: 50% !important;
-  }
-  .mail .columns td.seven {
-    width: 58.333333% !important;
-  }
-  .mail .column td.seven {
-    width: 58.333333% !important;
-  }
-  .mail .columns td.eight {
-    width: 66.666666% !important;
-  }
-  .mail .column td.eight {
-    width: 66.666666% !important;
-  }
-  .mail .columns td.nine {
-    width: 75% !important;
-  }
-  .mail .column td.nine {
-    width: 75% !important;
-  }
-  .mail .columns td.ten {
-    width: 83.333333% !important;
-  }
-  .mail .column td.ten {
-    width: 83.333333% !important;
-  }
-  .mail .columns td.eleven {
-    width: 91.666666% !important;
-  }
-  .mail .column td.eleven {
-    width: 91.666666% !important;
-  }
-  .mail .columns td.twelve {
-    width: 100% !important;
-  }
-  .mail .column td.twelve {
-    width: 100% !important;
-  }
-  .mail td.offset-by-eleven {
-    padding-left: 0 !important;
-  }
-  .mail td.offset-by-ten {
-    padding-left: 0 !important;
-  }
-  .mail td.offset-by-nine {
-    padding-left: 0 !important;
-  }
-  .mail td.offset-by-eight {
-    padding-left: 0 !important;
-  }
-  .mail td.offset-by-seven {
-    padding-left: 0 !important;
-  }
-  .mail td.offset-by-six {
-    padding-left: 0 !important;
-  }
-  .mail td.offset-by-five {
-    padding-left: 0 !important;
-  }
-  .mail td.offset-by-four {
-    padding-left: 0 !important;
-  }
-  .mail td.offset-by-three {
-    padding-left: 0 !important;
-  }
-  .mail td.offset-by-two {
-    padding-left: 0 !important;
-  }
-  .mail td.offset-by-one {
-    padding-left: 0 !important;
-  }
-  .mail table.columns td.expander {
-    width: 1px !important;
-  }
-  .mail .right-text-pad {
-    padding-left: 10px !important;
-  }
-  .mail .text-pad-right {
-    padding-left: 10px !important;
-  }
-  .mail .left-text-pad {
-    padding-right: 10px !important;
-  }
-  .mail .text-pad-left {
-    padding-right: 10px !important;
-  }
-  .mail .hide-for-small {
-    display: none !important;
-  }
-  .mail .show-for-desktop {
-    display: none !important;
-  }
-  .mail .show-for-small {
-    display: block !important; width: auto !important; overflow: visible !important;
-  }
-  .mail .hide-for-desktop {
-    display: block !important; width: auto !important; overflow: visible !important;
-  }
-  .mail .hide-and-true {
-    display: none;
-  }
-  .mail .hide-and-false {
-    display: block !important;
-  }
-  .mail .hide-or-true {
-    display: none !important;
-  }
-}
-</style>
+        [style*="Raleway"] {
+            font-family: 'Raleway', arial, sans-serif !important;
+        }
+
+        img {
+            outline: none;
+            text-decoration: none;
+            border: none;
+            -ms-interpolation-mode: bicubic;
+            max-width: 100% !important;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        .banner-td {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0.28px;
+        }
+
+        .header-td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .features-td {
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+
+        .features-td {
+            color: #000000;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0.28px;
+        }
+
+        .blockqoute-td {
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        .block-td p {
+            color: #8c8c8c;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0.28px;
+        }
+
+        .block-table td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .product {
+            padding-top: 20px;
+        }
+
+        .product h3 {
+            margin-top: 20px;
+            color: #686868;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.56px;
+            margin-bottom: 5px;
+        }
+
+        .product p {
+            color: #8c8c8c;
+            font-size: 13px;
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 0.52px;
+            margin: 0;
+        }
+
+        .footer-td {
+            padding-top: 40px;
+            padding-bottom: 80px;
+            color: #bcc9dd;
+        }
+
+        .footer-td p {
+            color: #bcc9dd;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0.28px;
+        }
+
+        .footer-td h3 {
+            color: #bcc9dd;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0.28px;
+        }
+
+        .footer-td h2 {
+            color: #bcc9dd;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0.28px;
+        }
+
+        .footer-td a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+        .footer-menu-td {
+            padding-top: 30px;
+            padding-bottom: 35px;
+        }
+
+        .footer-menu-td a {
+            color: #bcc9dd;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.36px;
+            text-decoration: none;
+        }
+
+        .copyright-td {
+            color: #bcc9dd;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.31px;
+        }
+
+        .copyright-td a {
+            font-weight: 600;
+            text-decoration: none;
+            color: #bcc9dd;
+        }
+
+        @media (max-width: 870px) {
+            .table-850 {
+                width: 600px !important;
+            }
+
+            .table-600 {
+                width: 550px !important;
+            }
+
+            .block-table {
+                width: 200px !important;
+            }
+
+            .block-table p br {
+                display: none !important;
+            }
+
+            .features-td td {
+                display: block !important;
+                margin-bottom: 50px !important;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .table-850 {
+                width: 400px !important;
+            }
+
+            .table-600 {
+                width: 320px !important;
+            }
+
+            .block-td {
+                display: block !important;
+                margin-bottom: 50px !important;
+                padding: 0 !important;
+            }
+
+            .blockqoute-td tr {
+                display: block !important;
+            }
+
+            .block-table {
+                width: 320px !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+
+            /* .product {
+                width: 200px !important;
+            } */
+
+            .logo {
+                display: block !important;
+                margin: 0 auto !important;
+                text-align: left !important;
+                width: 50px !important;
+                margin-bottom: 20px !important;
+            }
+
+            .logo img {
+                margin: 0 auto !important;
+            }
+
+            .menu {
+                display: block !important;
+                margin: 0 auto !important;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .table-850 {
+                width: 300px !important;
+            }
+
+            .table-600 {
+                width: 260px !important;
+            }
+
+            .block-table {
+                width: 260px !important;
+            }
+
+            /*  .product {
+                width: 130px !important;
+            } */
+
+            .blockqoute-td {
+                padding-top: 50px !important;
+                padding-bottom: 50px !important;
+            }
+
+            .footer-menu-td table {
+                width: 260px !important;
+            }
+
+            .menu td {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+        }
+    </style>
 </head>
-<body style="width: 100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-align: left; line-height: 1.5; background: #ffffff repeat center top; margin: 0; padding: 0;" bgcolor="#ffffff">
-<table class="mail" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: #ffffff repeat center top; margin: 0; padding: 0;" bgcolor="#ffffff">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td align="center" class="center" valign="top" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;">
-<center style="width: 100%; min-width: 580px;">
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top">
-<table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; background: transparent repeat center top; padding: 0px;" bgcolor="transparent">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-full" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; background: transparent repeat center center; padding: 0;" width="100%" bgcolor="transparent">
-<tbody>
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td height="%" style="width: 50% !important; height: % !important; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: repeat center top; margin: 0; padding: 0;" width="50%" align="left" valign="top">
-<!--[if mso]>
-<table align='left' style='border-collapse: collapse; border-spacing: 0; overflow: hidden; border: 0; width: 100%; '>
-<tr>
-<td style='padding: 0px 0px 0px 0px;'>
-<img alt='logo.png' src='https://app.makemail.ru/content/a1bec371bdcd854a701c8d21a7e7a195.png' width='130'>
-</td>
-</tr>
-</table>
-<![endif]-->
-<!--[if !mso]>
-<!---->
-<div align="left" style="padding: 0px;">
-<img alt="logo.png" class="left" height="34" src="https://app.makemail.ru/content/a1bec371bdcd854a701c8d21a7e7a195.png" style="width: 130px !important; height: 34px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; float: left; clear: both; display: block;" width="130" align="left">
-</div>
-<div class="clearfix" style="clear: both;"></div>
-<!-- <![endif]-->
 
-
-</td>
-<td height="%" style="width: 50% !important; height: % !important; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: repeat center top; margin: 0; padding: 0;" width="50%" align="left" valign="top">
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent repeat center center; margin: 0; padding: 7px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top">
-<table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; background: transparent url('https://app.makemail.ru/content/f80c8b2852ad0a35eb635231e02abbfe.jpg') no-repeat center center; padding: 0px;" bgcolor="transparent" background="https://app.makemail.ru/content/f80c8b2852ad0a35eb635231e02abbfe.jpg">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent repeat center center; margin: 0; padding: 60px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><span style="font-size: 12pt;"><strong><span style="color: #993366;">Добрый день, ФИО! <span style="background-color: #ffff00;">вписывает менеджер  </span></span></strong></span></p>
-</td>
-</tr>
-</table>
-
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent repeat center center; margin: 0; padding: 169px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top">
-<table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; background: transparent repeat center top; padding: 0px;" bgcolor="transparent">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><span style="color: #993366; font-size: 12pt;">По итогам сегодняшних переговоров направляю Вам каталог продукции ГК «Тамаки», информацию о бесплатном онлайн обучении поваров и информацию, как получить бесплатные образцы для проработки. </span></p>
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><span style="color: #993366; font-size: 12pt;">С уважением, ФИО <span style="background-color: #ffff00;">вписывает менеджер </span></span></p>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top">
-<table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; background: transparent repeat center top; padding: 0px;" bgcolor="transparent">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><span style="font-size: 12pt;">Лидер производства продуктов питания для японской и паназиатской кухни группа компаний «Тамаки» </span></p>
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><br><span style="font-size: 14pt;"><strong>Шеф-поварам Технологам Закупщикам </strong></span></p>
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><br><span style="font-size: 18pt; color: #993366;"><strong>3 шага сотрудничества для ресторан</strong>ов </span></p>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top">
-<table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; background: transparent repeat center top; padding: 0px;" bgcolor="transparent">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first " style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 20px 0px 0px;" align="left" valign="top">
-<table class="four columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 180px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<h3 style="text-align: center; color: #565d5e; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 32px; line-height: 1.5; word-break: normal; margin: 0; padding: 0;" align="center"><span style="font-size: 18px;"><strong>Шаг 1</strong></span></h3>
-</td>
-</tr>
-</table>
-
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent repeat center center; margin: 0; padding: 20px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Запросите у своих поставщиков продукцию нашего производства</p>
-</td>
-</tr>
-</table>
-
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent repeat center center; margin: 0; padding: 20px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-<!--[if mso]>
-<table align='center' style='border-collapse: collapse; border-spacing: 0; overflow: hidden; border: 0; width: 100%; '>
-<tr>
-<td style='padding: 0px 0px 0px 0px;'>
-<img alt='icon1' src='https://app.makemail.ru/content/2ac20332635bc04868146901e57e638f.png' width='121'>
-</td>
-</tr>
-</table>
-<![endif]-->
-<!--[if !mso]>
-<!---->
-<div align="center" style="padding: 0px;">
-<img alt="icon1" class="center" height="121" src="https://app.makemail.ru/content/2ac20332635bc04868146901e57e638f.png" style="width: 121px !important; height: 121px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; float: none; clear: both; display: block; margin: 0 auto;" width="121" align="none">
-</div>
-<div class="clearfix" style="clear: both;"></div>
-<!-- <![endif]-->
-
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Рис «TAMAKI»</p>
-</td>
-</tr>
-</table>
-
-<!--[if mso]>
-<table align='center' style='border-collapse: collapse; border-spacing: 0; overflow: hidden; border: 0; width: 100%; '>
-<tr>
-<td style='padding: 0px 0px 0px 0px;'>
-<img alt='icon1' src='https://app.makemail.ru/content/2e5e0f738954e2da90b50679c9477cdb.png' width='121'>
-</td>
-</tr>
-</table>
-<![endif]-->
-<!--[if !mso]>
-<!---->
-<div align="center" style="padding: 0px;">
-<img alt="icon1" class="center" height="121" src="https://app.makemail.ru/content/2e5e0f738954e2da90b50679c9477cdb.png" style="width: 121px !important; height: 121px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; float: none; clear: both; display: block; margin: 0 auto;" width="121" align="none">
-</div>
-<div class="clearfix" style="clear: both;"></div>
-<!-- <![endif]-->
-
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Соус соевый «TAMAKI»</p>
-</td>
-</tr>
-</table>
-
-<!--[if mso]>
-<table align='center' style='border-collapse: collapse; border-spacing: 0; overflow: hidden; border: 0; width: 100%; '>
-<tr>
-<td style='padding: 0px 0px 0px 0px;'>
-<img alt='icon1' src='https://app.makemail.ru/content/04f10847f17250cfed2a9cbad7fcf4be.png' width='121'>
-</td>
-</tr>
-</table>
-<![endif]-->
-<!--[if !mso]>
-<!---->
-<div align="center" style="padding: 0px;">
-<img alt="icon1" class="center" height="121" src="https://app.makemail.ru/content/04f10847f17250cfed2a9cbad7fcf4be.png" style="width: 121px !important; height: 121px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; float: none; clear: both; display: block; margin: 0 auto;" width="121" align="none">
-</div>
-<div class="clearfix" style="clear: both;"></div>
-<!-- <![endif]-->
-
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Сухари панировочные Панко «KASHO» / «TAMAKI»</p>
-</td>
-</tr>
-</table>
-
-<!--[if mso]>
-<table align='center' style='border-collapse: collapse; border-spacing: 0; overflow: hidden; border: 0; width: 100%; '>
-<tr>
-<td style='padding: 0px 0px 0px 0px;'>
-<img alt='icon1' src='https://app.makemail.ru/content/15dfedd6dae876307c783a894cf43c30.png' width='121'>
-</td>
-</tr>
-</table>
-<![endif]-->
-<!--[if !mso]>
-<!---->
-<div align="center" style="padding: 0px;">
-<img alt="icon1" class="center" height="121" src="https://app.makemail.ru/content/15dfedd6dae876307c783a894cf43c30.png" style="width: 121px !important; height: 121px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; float: none; clear: both; display: block; margin: 0 auto;" width="121" align="none">
-</div>
-<div class="clearfix" style="clear: both;"></div>
-<!-- <![endif]-->
-
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Соус терияки «TAMAKI» / «ASA PROFESSIONAL»</p>
-</td>
-</tr>
-</table>
-
-<!--[if mso]>
-<table align='center' style='border-collapse: collapse; border-spacing: 0; overflow: hidden; border: 0; width: 100%; '>
-<tr>
-<td style='padding: 0px 0px 0px 0px;'>
-<img alt='icon1' src='https://app.makemail.ru/content/e38df2e7da39c9f2972d87b81e9fd314.png' width='121'>
-</td>
-</tr>
-</table>
-<![endif]-->
-<!--[if !mso]>
-<!---->
-<div align="center" style="padding: 0px;">
-<img alt="icon1" class="center" height="121" src="https://app.makemail.ru/content/e38df2e7da39c9f2972d87b81e9fd314.png" style="width: 121px !important; height: 121px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; float: none; clear: both; display: block; margin: 0 auto;" width="121" align="none">
-</div>
-<div class="clearfix" style="clear: both;"></div>
-<!-- <![endif]-->
-
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Соус сладкий чили для курицы «TAMAKI» / «ASA PROFESSIONAL»</p>
-</td>
-</tr>
-</table>
-
-<!--[if mso]>
-<table align='center' style='border-collapse: collapse; border-spacing: 0; overflow: hidden; border: 0; width: 100%; '>
-<tr>
-<td style='padding: 0px 0px 0px 0px;'>
-<img alt='icon1' src='https://app.makemail.ru/content/27c78143098015fa51a5f3fdcf04883b.png' width='121'>
-</td>
-</tr>
-</table>
-<![endif]-->
-<!--[if !mso]>
-<!---->
-<div align="center" style="padding: 0px;">
-<img alt="icon1" class="center" height="121" src="https://app.makemail.ru/content/27c78143098015fa51a5f3fdcf04883b.png" style="width: 121px !important; height: 121px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; float: none; clear: both; display: block; margin: 0 auto;" width="121" align="none">
-</div>
-<div class="clearfix" style="clear: both;"></div>
-<!-- <![endif]-->
-
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Соус унаги «TAMAKI» / «ASA PROFESSIONAL»</p>
-</td>
-</tr>
-</table>
-
-<!--[if mso]>
-<table align='center' style='border-collapse: collapse; border-spacing: 0; overflow: hidden; border: 0; width: 100%; '>
-<tr>
-<td style='padding: 0px 0px 0px 0px;'>
-<img alt='icon1' src='https://app.makemail.ru/content/1e518a091c6d30efeb48728a9353515c.png' width='121'>
-</td>
-</tr>
-</table>
-<![endif]-->
-<!--[if !mso]>
-<!---->
-<div align="center" style="padding: 0px;">
-<img alt="icon1" class="center" height="121" src="https://app.makemail.ru/content/1e518a091c6d30efeb48728a9353515c.png" style="width: 121px !important; height: 121px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; float: none; clear: both; display: block; margin: 0 auto;" width="121" align="none">
-</div>
-<div class="clearfix" style="clear: both;"></div>
-<!-- <![endif]-->
-
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Приправа сухая на основе хрена васаби «HANASYO»</p>
-</td>
-</tr>
-</table>
-
-<!--[if mso]>
-<table align='center' style='border-collapse: collapse; border-spacing: 0; overflow: hidden; border: 0; width: 100%; '>
-<tr>
-<td style='padding: 0px 0px 0px 0px;'>
-<img alt='icon1' src='https://app.makemail.ru/content/2e280b1e226db2bcb2d7cc462c1fbfd8.png' width='121'>
-</td>
-</tr>
-</table>
-<![endif]-->
-<!--[if !mso]>
-<!---->
-<div align="center" style="padding: 0px;">
-<img alt="icon1" class="center" height="121" src="https://app.makemail.ru/content/2e280b1e226db2bcb2d7cc462c1fbfd8.png" style="width: 121px !important; height: 121px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; float: none; clear: both; display: block; margin: 0 auto;" width="121" align="none">
-</div>
-<div class="clearfix" style="clear: both;"></div>
-<!-- <![endif]-->
-
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Водоросли нори «ASA PROFESSIONAL»</p>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-<td class="wrapper" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 20px 0px 0px;" align="left" valign="top">
-<table class="four columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 180px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<h3 style="text-align: center; color: #565d5e; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 32px; line-height: 1.5; word-break: normal; margin: 0; padding: 0;" align="center"><span style="font-size: 18px;"><strong>Шаг 2</strong></span></h3>
-</td>
-</tr>
-</table>
-
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent repeat center center; margin: 0; padding: 20px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Скачайте каталог производителя продуктов японской и паназиатской кухни  </p>
-</td>
-</tr>
-</table>
-
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent url('https://app.makemail.ru/content/1fbeb5d70bf1d3aac8fe725a035540f2.jpg') no-repeat center center; margin: 0; padding: 137px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-<td class="wrapper last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="four columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 180px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<h3 style="text-align: center; color: #565d5e; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 32px; line-height: 1.5; word-break: normal; margin: 0; padding: 0;" align="center"><span style="font-size: 18px;"><strong>Шаг 3</strong></span></h3>
-</td>
-</tr>
-</table>
-
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent repeat center center; margin: 0; padding: 20px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center">Зарегистрируйтесь на бесплатный онлайн курс приготовления блюд японской и паназиатской кухни Академии суши «Тамаки»</p>
-</td>
-</tr>
-</table>
-
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent url('https://app.makemail.ru/content/96e18e3f409d7163b00feae2ce540941.jpg') no-repeat center center; margin: 0; padding: 158px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="row" style="text-align: center; border-spacing: 0; border-collapse: collapse; vertical-align: top; width: 100%; position: relative; background: #ffffff repeat center top; padding: 0px;" bgcolor="#ffffff">
-<tr style="text-align: center; vertical-align: top; padding: 0;" align="center">
-<td style="text-align: center; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="center" valign="top">
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first " style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 20px 0px 0px;" align="left" valign="top">
-<table class="four columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 180px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent url('https://app.makemail.ru/content/dd90a715740e236424014dde69fb0e71.jpg') no-repeat center center; margin: 0; padding: 141px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-<td class="wrapper" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 20px 0px 0px;" align="left" valign="top">
-<table class="four columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 180px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent url('https://app.makemail.ru/content/a43cd2428d177b80c1cf1b8c013518c9.jpg') no-repeat center bottom; margin: 0; padding: 129px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-<td class="wrapper last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="four columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 180px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent repeat center center; margin: 0; padding: 20px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent url('https://app.makemail.ru/content/7427b738995a1e1493459d7808126307.jpg') no-repeat center top; margin: 0; padding: 110px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="row" style="text-align: center; border-spacing: 0; border-collapse: collapse; vertical-align: top; width: 100%; position: relative; background: #ffffff repeat center top; padding: 0px;" bgcolor="#ffffff">
-<tr style="text-align: center; vertical-align: top; padding: 0;" align="center">
-<td style="text-align: center; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="center" valign="top">
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table style="width: 100%; border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<td class="" style="font-size: 1px; line-height: 0; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; background: transparent repeat center center; margin: 0; padding: 20px 0px 10px;" align="left" bgcolor="transparent" valign="top"> </td>
-</table>
-
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: justify; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="justify"><span style="font-size: 12pt;">Мы решили доказать, что <strong>качественные продукты не должны быть дорогими.</strong> И, если профессионально подойти к производству, уделять особое внимание ноу-хау, то можно производить, действительно, <strong>вкусные, натуральные и очень качественные продукты по доступным для всех ценам.</strong> Наши продукты настолько хороши, что мы еще и активно выходим и за рубеж.</span></p>
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"> </p>
-<p style="text-align: left; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="left"><span style="font-size: 12pt;"><strong>КТО МЫ? </strong></span></p>
-<p style="text-align: justify; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="justify"><span style="font-size: 12pt;"><br>• Мы являемся одним из <strong>крупнейших производителей </strong>и импортеров продуктов питания японской и паназиатской кухни для сегментов HoReCa и Ритейл. <br>Поэтому предлагаем одни из лучших условий.  <br>• Выпускаем продукцию <strong>под брендами </strong> «Tamaki», «ASA by Tamaki», «ASA Professional by Tamaki», «Kasho by Tamaki ». <br>• Мы активно работаем с <strong>85 субъектами</strong> РФ, а также в Казахстане,  Литве, Армении, Беларуси, Азербайджане, Киргизии, Узбекистане, Туркменистане и т.д. <br>• Мы поставляем продукцию <strong>более 400-м дистрибьюторов для дальнейшей реализации ресторанам, кафе, службам доставки и т.д.  </strong><br>• Наша продукция присутствует <strong>на полках во многих сетях гипермаркетов и супермаркетов</strong>, таких, как "Перекресток", "Ашан", "Азбука Вкуса", «Карусель», «Твой Дом», «Гипер Глобус», маркет-плейсах: «Ozon», «Wildberries» и онлан-магазинах: «Утконос», «Перекресток.Впрок» и многих других. <br> <br><strong>ПОЧЕМУ МЫ?  </strong></span></p>
-<p style="text-align: justify; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="justify"><span style="font-size: 12pt;"><br>• Наша продукция натуральная, произведена <strong>по традиционным японским технологиям, с высоким содержанием ценных составляющих</strong>, в удобных и эргономичных упаковках.  <br>• Ежемесячно <strong>мы выпускаем новинки и внедряем ноу-хау.  </strong><br>• Большинство наших позиций являются <strong>хитами и лидируют на рынке,</strong> получают <strong>золотые медали. </strong><br>• Мы один из самых <strong>серьезных производителей </strong>риса, водорослей, панировочных сухарей, васаби, соусов.  <br>• В данный момент <strong>ведем строительство</strong> еще одного <strong>современного завода в Москве.  </strong><br>• Мы взяли довольную <strong>высокую планку по качеству</strong> и стараемся ей соответствовать. Это касается и качества обслуживания, и цен, и маркетинга и, самих продуктов. <br> <br><strong>ЧЕМ МЫ МОЖЕМ БЫТЬ ВАМ ПОЛЕЗНЫ? </strong></span></p>
-<p style="text-align: justify; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="justify"><span style="font-size: 12pt;"><br>• Каждый месяц мы готовы направлять Вам через Ваших дистрибьюторов, бесплатные образцы продукции. Вы всегда можете ПОТРЕБОВАТЬ их у Вашего поставщика и СООБЩИТЬ нам, если по какой-либо причине Вы их не получаете!  <br>• Вы можете сообщить нам, через каких дистрибьюторов и поставщиков Вам удобно получать бесплатные образцы для проработки от группы компаний «Тамаки». <br>• Мы регулярно проводим промо-акции на наши лучшие продукты: рис, васаби, соевый соус, рисовый уксус, сухари и многое другое. для дистрибьюторов, чтобы Вы могли получать самые лучшие условия.  <br>• Наши Партнеры первыми узнают о самых <strong>новых продуктах и профессиональных сериях </strong>японской кухни. Мы хотим, чтобы ВЫ ТОЖЕ УЗНАВАЛИ О НИХ! <br>• Наша компания <strong>проводит бесплатное онлайн обучение поваров,</strong> менеджеров отделов закупки, технологов ресторанов японской и паназиатской кухни приготовлению блюд японской и паназиатской кухни «Академия суши «Тамаки». Напишите или позвоните нам. МЫ ЗАПИШЕМ ВАС И ВАШИХ СОТРУДНИКОВ НА ОБУЧЕНИЕ! Или зарегистрируйтесь сами по ссылке ССЫЛКА <br>• Скачайте наш каталог продукции ССЫЛКА и запросите ее у своих дистрибьюторов. </span></p>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="row" style="text-align: center; border-spacing: 0; border-collapse: collapse; vertical-align: top; width: 100%; position: relative; background: #f5f5f5 repeat center top; padding: 0px;" bgcolor="#f5f5f5">
-<tr style="text-align: center; vertical-align: top; padding: 0;" align="center">
-<td style="text-align: center; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="center" valign="top">
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><span style="font-size: 12pt;"><strong>Вы еще не закупаете нашу продукцию? Это надо исправить! </strong></span></p>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="row" style="text-align: center; border-spacing: 0; border-collapse: collapse; vertical-align: top; width: 100%; position: relative; background: #f5f5f5 repeat center top; padding: 0px;" bgcolor="#f5f5f5">
-<tr style="text-align: center; vertical-align: top; padding: 0;" align="center">
-<td style="text-align: center; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="center" valign="top">
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><span style="font-size: 14pt;"><strong>ПОЗВОНИТЕ НАМ И ЗАДАЙТЕ СВОИ ВОПРОСЫ. </strong></span></p>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="row" style="text-align: center; border-spacing: 0; border-collapse: collapse; vertical-align: top; width: 100%; position: relative; background: #f5f5f5 repeat center top; padding: 0px;" bgcolor="#f5f5f5">
-<tr style="text-align: center; vertical-align: top; padding: 0;" align="center">
-<td style="text-align: center; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="center" valign="top">
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><span style="font-size: 10pt; color: #993366;">Производство и оптовые поставки профессиональных продуктов </span><br><span style="font-size: 10pt; color: #993366;">для паназиатской кухни</span></p>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="row" style="text-align: center; border-spacing: 0; border-collapse: collapse; vertical-align: top; width: 100%; position: relative; background: #f5f5f5 repeat center top; padding: 0px;" bgcolor="#f5f5f5">
-<tr style="text-align: center; vertical-align: top; padding: 0;" align="center">
-<td style="text-align: center; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="center" valign="top">
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><span style="font-size: 10pt;">Наши контакты: </span><br><span style="font-size: 10pt;">+7 (495) 989-44-35 </span><br><span style="font-size: 10pt;">hello@tamaki.ru</span></p>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="row" style="text-align: center; border-spacing: 0; border-collapse: collapse; vertical-align: top; width: 100%; position: relative; background: #f5f5f5 repeat center top; padding: 0px;" bgcolor="#f5f5f5">
-<tr style="text-align: center; vertical-align: top; padding: 0;" align="center">
-<td style="text-align: center; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="center" valign="top">
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table class="table-block" width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px 10px;" align="left" bgcolor="transparent" valign="top">
-<p style="text-align: center; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0 0 10px; padding: 0;" align="center"><span style="font-size: 12pt;">Подпишитесь на наши страницы в соц.сетях </span></p>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table class="row" style="text-align: center; border-spacing: 0; border-collapse: collapse; vertical-align: top; width: 100%; position: relative; background: #f5f5f5 repeat center top; padding: 0px;" bgcolor="#f5f5f5">
-<tr style="text-align: center; vertical-align: top; padding: 0;" align="center">
-<td style="text-align: center; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="center" valign="top">
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px;" align="left" valign="top">
-<div class="center social" style="text-align: center;" align="center">
-<a href="https://www.tamaki.ru/" style="padding-right: 5px; text-decoration: none; color: #2ba6cb;">
-<img alt="" src="https://app.makemail.ru/content/53ffb2d9295ca0a7ac8acac619b2479c.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; float: inherit; clear: both; display: inline; border: none;" align="inherit">
-</a>
-<!--[if mso]>
-&nbsp;
-<![endif]-->
-<a href="https://www.instagram.com/tamakirus/" style="padding-right: 5px; text-decoration: none; color: #2ba6cb;">
-<img alt="" src="https://app.makemail.ru/content/f13c9d1fe8eeebeeaf7c1c163a2deaaf.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; float: inherit; clear: both; display: inline; border: none;" align="inherit">
-</a>
-<!--[if mso]>
-&nbsp;
-<![endif]-->
-<a href="https://vk.com/tamakirus" style="padding-right: 5px; text-decoration: none; color: #2ba6cb;">
-<img alt="" src="https://app.makemail.ru/content/f0e74fc6b5fba118723d394eccaee8f1.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; float: inherit; clear: both; display: inline; border: none;" align="inherit">
-</a>
-<!--[if mso]>
-&nbsp;
-<![endif]-->
-</div>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-
-<table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; max-width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top">
-<table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; background: transparent repeat center top; padding: 0px;" bgcolor="transparent">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="wrapper first last" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
-<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
-<table width="100%" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;">
-<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-<td class="center" style="text-align: center; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; width: 100%; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; background: transparent repeat center center; margin: 0; padding: 0px;" align="center" bgcolor="transparent" valign="top">
-Если вы не хотите больше получать наши письма, просто перейдите по ссылке
-<a href="%5B%unsubscribe_link%%5D" style="color: #2ba6cb; text-decoration: none;">отказаться от рассылки</a>
-</td>
-</tr>
-</table>
-
-
-</td>
-<td class="expander" style="word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; width: 100%; visibility: hidden; color: #717e7f; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5; margin: 0; padding: 0;" align="left" valign="top"></td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
-</table>
-
-</center>
-</td>
-</tr>
-</table>
-
+<body style="margin: 0; padding: 0;">
+    <div style="font-size:0px;font-color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">Тестовое
+        письмо</div>
+    <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ec5483">
+        <tr>
+            <td>
+                <table class="main table-850" cellpadding="0" cellspacing="0" width="850" align="center">
+                    <tr>
+                        <td height="30" width="850"></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ffffff" class="header-td">
+                            <table class="table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+                                <tr>
+                                    <td align="left" class="logo">
+                                        <img src="img/logo.png" alt="logo" width="100px" />
+                                    </td>
+                                    <td align="right" class="menu">
+                                        <table cellpadding="0" cellspacing="0">
+                                            <tr></tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" class="banner-td">
+                            <table class="table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+                                <tr>
+                                    <td align="center">
+                                        <h2 style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            Добрый день, ФИО! вписывает менеджер
+                                        </h2>
+                                        <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            По итогам сегодняшних переговоров направляю Вам каталог продукции ГК
+                                            «Тамаки», информацию о бесплатном онлайн обучении поваров и информацию, как
+                                            получить бесплатные образцы для проработки.
+                                        </p>
+                                        <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            С уважением, ФИО вписывает менеджер
+                                        </p>
+                                        <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            Лидер производства продуктов питания для японской и паназиатской кухни
+                                            группа компаний «Тамаки»
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="features-td" bgcolor="#ffffff" style="background-image:url(img/banner_bg.svg)">
+                            <table class="table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+                                <tr>
+                                    <td align="center">
+                                        <h3 style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            Шеф-поварам Технологам Закупщикам
+                                        </h3>
+                                        <h2 style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            3 Шага Сотрудничества Для Ресторанов
+                                        </h2>
+                                        <h3 style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            <b>Шаг 1. Запросите у своих поставщиков продукцию нашего производства</b>
+                                        </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="block-td" align="center" style="padding-right: 20px;">
+                                        <table cellpadding="0" cellspacing="0" class="block-table" align="center"
+                                            width="500">
+                                            <tr>
+                                                <td class="product" align="center"
+                                                    style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                    <img src="img/product/product_1.png" alt="product" />
+                                                    <h3>Рис «TAMAKI»</h3>
+                                                </td>
+                                                <td class="product" align="center"
+                                                    style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                    <img src="img/product/product_2.png" alt="product" />
+                                                    <h3>Соус соевый «TAMAKI»</h3>
+                                                </td>
+                                                <td class="product" align="center"
+                                                    style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                    <img src="img/product/product_3.png" alt="product" />
+                                                    <h3>Сухари панировочные Панко «KASHO» / «TAMAKI»</h3>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product" align="center"
+                                                    style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                    <img src="img/product/product_4.png" alt="product" />
+                                                    <h3>Соус терияки «TAMAKI» / «ASA PROFESSIONAL»</h3>
+                                                </td>
+                                                <td class="product" align="center"
+                                                    style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                    <img src="img/product/product_5.png" alt="product" />
+                                                    <h3>Соус унаги «TAMAKI» / «ASA PROFESSIONAL»</h3>
+                                                </td>
+                                                <td class="product" align="center"
+                                                    style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                    <img src="img/product/product_6.png" alt="product" />
+                                                    <h3>Соус сладкий чили для курицы «TAMAKI» / «ASA PROFESSIONAL»</h3>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product" align="center"
+                                                    style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                    <img src="img/product/product_7.png" alt="product" />
+                                                    <h3>Приправа сухая на основе хрена васаби «HANASYO»</h3>
+                                                </td>
+                                                <td class="product" align="center"
+                                                    style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                    <img src="img/product/product_8.png" alt="product" />
+                                                    <h3>Соус ореховый «TAMAKI» / «ASA PROFESSIONAL»</h3>
+                                                </td>
+                                                <td class="product" align="center"
+                                                    style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                    <img src="img/product/product_9.png" alt="product" />
+                                                    <h3>Водоросли нори «ASA PROFESSIONAL»</h3>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <h3 style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            <b>Шаг 2. Скачайте каталог производителя продуктов японской и паназиатской
+                                                кухни</b>
+                                        </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="product" align="center"
+                                        style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                        <img src="img/qrcode_4046195_.jpg" alt="qrcode" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <h3 style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            <b>Шаг 3. Зарегистрируйтесь на бесплатный онлайн курс приготовления блюд
+                                                японской и паназиатской кухни Академии суши «Тамаки»</b>
+                                        </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="product" align="center"
+                                        style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                        <img src="img/qrcode_4046347_.jpg" alt="qrcode" />
+                                    </td>
+                                </tr>
+                                <table cellpadding="0" cellspacing="0" class="block-table" align="center" width="500">
+                                    <tr>
+                                        <td class="product" align="center"
+                                            style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            <img src="img/logo_asa.png" alt="brand" />
+                                            <h3 style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">ASA
+                                                Professional by Tamaki</h3>
+                                        </td>
+                                        <td class="product" align="center"
+                                            style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            <img src="img/logo_kasho.png" alt="brand" />
+                                            <h3 style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">Kasho by
+                                                Tamaki</h3>
+                                        </td>
+                                        <td class="product" align="center"
+                                            style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                            <img src="img/logo_tamaki.png" alt="brand" />
+                                            <h3 style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">Tamaki
+                                            </h3>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+                                    <tr>
+                                        <td align="center">
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                Мы решили доказать, что <b>качественные продукты не должны быть
+                                                    дорогими.</b> И, если профессионально подойти к производству,
+                                                уделять особое внимание ноу-хау, то можно производить, действительно,
+                                                <b>вкусные, натуральные и очень качественные продукты по доступным для
+                                                    всех ценам.</b> Наши продукты настолько хороши,
+                                                что мы еще и активно выходим и за рубеж.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <h3
+                                                style="font-family: Arial, Helvetica, sans-serif, 'Raleway'; text-transform: uppercase;">
+                                                Кто мы?</h3>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Мы являемся одним из <b>крупнейших производителей</b> и импортеров
+                                                продуктов
+                                                питания японской и паназиатской кухни для сегментов HoReCa и Ритейл. 
+                                                Поэтому предлагаем одни из лучших условий.  
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Выпускаем продукцию <b>под брендами</b>  «Tamaki», «ASA by Tamaki»,
+                                                «ASA
+                                                Professional by Tamaki», «Kasho by Tamaki ». 
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Мы активно работаем с <b>85 субъектами</b> РФ, а также в
+                                                Казахстане,  Литве, Армении, Беларуси, Азербайджане, Киргизии,
+                                                Узбекистане, Туркменистане и т.д. 
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Мы поставляем продукцию <b>более 400-м дистрибьюторов для дальнейшей
+                                                    реализации ресторанам, кафе, службам доставки и т.д. </b>
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Наша продукция присутствует <b>на полках во многих сетях гипермаркетов
+                                                    и супермаркетов,</b> таких, как "Перекресток", "Ашан", "Азбука
+                                                Вкуса",
+                                                «Карусель», «Твой Дом», «Гипер Глобус», маркет-плейсах: «Ozon»,
+                                                «Wildberries» и онлан-магазинах: «Утконос», «Перекресток.Впрок» и многих
+                                                других. 
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <h3
+                                                style="font-family: Arial, Helvetica, sans-serif, 'Raleway'; text-transform: uppercase;">
+                                                Почему мы?</h3>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Наша продукция натуральная, произведена <b>по традиционным
+                                                    японским технологиям, с высоким содержанием ценных составляющих,</b>
+                                                в
+                                                удобных и эргономичных упаковках.   
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Ежемесячно мы <b>выпускаем новинки и внедряем ноу-хау. </b> 
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Большинство наших позиций являются <b>хитами и лидируют на рынке,</b>
+                                                получают <b>золотые медали. </b>
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Мы один из самых <b>серьезных производителей</b> риса, водорослей,
+                                                панировочных сухарей, васаби, соусов.  
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • В данный момент <b>ведем строительство</b> еще
+                                                одного <b>современного завода в Москве.</b>  
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Мы взяли довольную <b>высокую планку по качеству</b> и стараемся ей
+                                                соответствовать. Это касается и качества обслуживания, и цен, и
+                                                маркетинга и, самих продуктов. 
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <h3
+                                                style="font-family: Arial, Helvetica, sans-serif, 'Raleway'; text-transform: uppercase;">
+                                                Чем мы можем быть вам полезны?</h3>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Каждый месяц мы готовы направлять Вам через Ваших дистрибьюторов,
+                                                бесплатные образцы продукции. Вы всегда можете ПОТРЕБОВАТЬ их у Вашего
+                                                поставщика и СООБЩИТЬ нам, если по какой-либо причине Вы их не
+                                                получаете!    
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Вы можете сообщить нам, через каких дистрибьюторов и поставщиков Вам
+                                                удобно получать бесплатные образцы для проработки от группы компаний
+                                                «Тамаки». 
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Мы регулярно проводим промо-акции на наши лучшие продукты: рис,
+                                                васаби, соевый соус, рисовый уксус, сухари и многое другое.
+                                                для дистрибьюторов, чтобы Вы могли получать самые лучшие условия.  
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Наши Партнеры первыми узнают о самых 
+                                                <b>новых продуктах и профессиональных сериях</b> японской кухни. Мы
+                                                хотим, чтобы ВЫ ТОЖЕ УЗНАВАЛИ
+                                                О НИХ! 
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Наша компания <b>проводит бесплатное онлайн обучение</b> поваров,
+                                                менеджеров
+                                                отделов закупки, технологов ресторанов японской и паназиатской кухни
+                                                приготовлению блюд японской и паназиатской кухни «Академия суши
+                                                «Тамаки».
+                                                <br>Напишите или позвоните нам. МЫ ЗАПИШЕМ ВАС И ВАШИХ СОТРУДНИКОВ НА
+                                                ОБУЧЕНИЕ! Или зарегистрируйтесь сами по <a
+                                                    href="https://www.tamaki.ru/academy/">ссылке</a>. 
+                                            </p>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">
+                                                • Скачайте наш <a href="https://www.tamaki.ru/catalog/">каталог
+                                                    продукции</a> и запросите ее у своих
+                                                дистрибьюторов. 
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="footer-td" bgcolor="#38404b" style="color: #bcc9dd;">
+                            <table class="table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+                                <tr>
+                                    <td align="center">
+                                        <h3 style="font-family: Arial, Helvetica, sans-serif, 'Raleway';">Вы еще не
+                                            закупаете нашу продукцию? Это надо исправить!</h3>
+                                        <h2 style="font-family: Arial, Helvetica, sans-serif, 'Raleway'; text-transform: uppercase;">
+                                            Позвоните нам и задайте свои вопросы</h2>
+                                        <p>Производство и оптовые поставки профессиональных продуктов для паназиатской кухни</p>
+                                        <p>Наши контакты:
+                                           <br> <a href="tel: +74959894435">+7 (495) 989-44-35</a>
+                                           <br> <a href="mailto: hello@tamaki.ru">hello@tamaki.ru</a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="3">
+                                        <p>Подпишитесь на наши страницы в соц.сетях</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table align="center">
+                                <tr>
+                                    <td><a href="https://vk.com/tamakirus"><img src="img/icon/vkontakte.png" alt=""></a></td>
+                                    <td><a href="https://www.instagram.com/tamakirus/"><img src="img/icon/instagram.png" alt=""></a></td>
+                                    <td><a href="https://www.tamaki.ru/"><img src="img/icon/tamaki_logo.png" alt=""></a></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30" width="850"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
+
 </html>
